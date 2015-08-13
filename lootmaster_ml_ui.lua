@@ -846,18 +846,18 @@ function LootMasterML:CandidateDropDownInitialize( frame, level, menuList )
 				-- 50%
                 info.isTitle = false;
                 info.disabled = not CanEditOfficerNote();
-                info.text = format("Give loot and award %s GP (50%%)", 0.5 * loot.gpvalue_manual or 0 );
+                info.text = format("Give loot and award %s GP (50%%)", math.floor(0.5 * loot.gpvalue_manual or 0) );
                 info.tooltipTitle = info.text;
-                info.tooltipText = format(L['Attempts to send the loot to the candidate and awards %s GP to the candidate'], 0.5 * loot.gpvalue_manual or 0);
-                info.func = function() LootMasterML.GiveLootToCandidate(LootMasterML, LootMasterML.CandidateDropDown.selectedLink, LootMasterML.CandidateDropDown.selectedCandidate, LootMaster.LOOTTYPE.GP, 0.5 * loot.gpvalue_manual or 0) end;
+                info.tooltipText = format(L['Attempts to send the loot to the candidate and awards %s GP to the candidate'], math.floor(0.5 * loot.gpvalue_manual or 0) );
+                info.func = function() LootMasterML.GiveLootToCandidate(LootMasterML, LootMasterML.CandidateDropDown.selectedLink, LootMasterML.CandidateDropDown.selectedCandidate, LootMaster.LOOTTYPE.GP, math.floor(0.5 * loot.gpvalue_manual or 0) ) end;
                 UIDropDownMenu_AddButton(info,UIDROPDOWNMENU_MENU_LEVEL);
 				-- 10%
                 info.isTitle = false;
                 info.disabled = not CanEditOfficerNote();
-                info.text = format("Give loot and award %s GP (10%%)", 0.1 * loot.gpvalue_manual or 0 );
+                info.text = format("Give loot and award %s GP (10%%)", math.floor(0.1 * loot.gpvalue_manual or 0) );
                 info.tooltipTitle = info.text;
-                info.tooltipText = format(L['Attempts to send the loot to the candidate and awards %s GP to the candidate'], 0.1 * loot.gpvalue_manual or 0);
-                info.func = function() LootMasterML.GiveLootToCandidate(LootMasterML, LootMasterML.CandidateDropDown.selectedLink, LootMasterML.CandidateDropDown.selectedCandidate, LootMaster.LOOTTYPE.GP, 0.1 * loot.gpvalue_manual or 0) end;
+                info.tooltipText = format(L['Attempts to send the loot to the candidate and awards %s GP to the candidate'], math.floor(0.1 * loot.gpvalue_manual or 0) );
+                info.func = function() LootMasterML.GiveLootToCandidate(LootMasterML, LootMasterML.CandidateDropDown.selectedLink, LootMasterML.CandidateDropDown.selectedCandidate, LootMaster.LOOTTYPE.GP, math.floor(0.1 * loot.gpvalue_manual or 0) ) end;
                 UIDropDownMenu_AddButton(info,UIDROPDOWNMENU_MENU_LEVEL);
 
                 if loot.gpvalue2 and loot.gpvalue2~=0 then
@@ -872,18 +872,18 @@ function LootMasterML:CandidateDropDownInitialize( frame, level, menuList )
 					-- 50%
                     info.isTitle = false;
                     info.disabled = not CanEditOfficerNote();
-                    info.text = format('Give loot and award %s GP (50%%)', 0.5 * loot.gpvalue2 or 0 );
+                    info.text = format('Give loot and award %s GP (50%%)', math.floor(0.5 * loot.gpvalue2 or 0) );
                     info.tooltipTitle = info.text;
-                    info.tooltipText = format(L['Attempts to send the loot to the candidate and awards %s GP to the candidate'], 0.5 * loot.gpvalue2 or 0);
-                    info.func = function() LootMasterML.GiveLootToCandidate(LootMasterML, LootMasterML.CandidateDropDown.selectedLink, LootMasterML.CandidateDropDown.selectedCandidate, LootMaster.LOOTTYPE.GP, 0.5 * loot.gpvalue2 or 0) end;
+                    info.tooltipText = format(L['Attempts to send the loot to the candidate and awards %s GP to the candidate'], math.floor(0.5 * loot.gpvalue2 or 0) );
+                    info.func = function() LootMasterML.GiveLootToCandidate(LootMasterML, LootMasterML.CandidateDropDown.selectedLink, LootMasterML.CandidateDropDown.selectedCandidate, LootMaster.LOOTTYPE.GP, math.floor(0.5 * loot.gpvalue2 or 0) ) end;
                     UIDropDownMenu_AddButton(info,UIDROPDOWNMENU_MENU_LEVEL);
 					-- 10%
                     info.isTitle = false;
                     info.disabled = not CanEditOfficerNote();
-                    info.text = format('Give loot and award %s GP (10%%)', 0.1 * loot.gpvalue2 or 0 );
+                    info.text = format('Give loot and award %s GP (10%%)', math.floor(0.1 * loot.gpvalue2 or 0) );
                     info.tooltipTitle = info.text;
-                    info.tooltipText = format(L['Attempts to send the loot to the candidate and awards %s GP to the candidate'], 0.1 * loot.gpvalue2 or 0);
-                    info.func = function() LootMasterML.GiveLootToCandidate(LootMasterML, LootMasterML.CandidateDropDown.selectedLink, LootMasterML.CandidateDropDown.selectedCandidate, LootMaster.LOOTTYPE.GP, 0.1 * loot.gpvalue2 or 0) end;
+                    info.tooltipText = format(L['Attempts to send the loot to the candidate and awards %s GP to the candidate'], math.floor(0.1 * loot.gpvalue2 or 0) );
+                    info.func = function() LootMasterML.GiveLootToCandidate(LootMasterML, LootMasterML.CandidateDropDown.selectedLink, LootMasterML.CandidateDropDown.selectedCandidate, LootMaster.LOOTTYPE.GP, math.floor(0.1 * loot.gpvalue2 or 0) ) end;
                     UIDropDownMenu_AddButton(info,UIDROPDOWNMENU_MENU_LEVEL);
                 end
 
